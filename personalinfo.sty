@@ -1,0 +1,49 @@
+% !TeX root = cv
+% !TeX root = sample
+
+
+\ProvidesPackage{personalinfo}
+
+\RequirePackage{paracol}
+\RequirePackage{expkv-cs}
+\RequirePackage{fontawesome5}
+\RequirePackage{hyperref}
+
+\newcommand\personalinfo[2]{%
+	#1 
+	\smallskip
+	#2
+}
+
+\newcommand\name[2]{%
+	\begin{center}
+		{\Huge #1}\\
+		\smallskip
+		{\large #2}\\
+	\end{center}
+}
+
+\ekvcSplit\contact{phone=, email=, github=, stackoverflow=}{%
+	\begin{center}
+		\begin{tabular}{cl}
+		\footnotesize
+		\ifblank{#1}{}{%
+			\faPhone & #1 \\
+		}
+		\ifblank{#2}{}{%
+			\href{mailto:#2}{\faEnvelope} & 
+			\href{mailto:#2}{#2} \\
+		}
+		\ifblank{#3}{}{%
+			 \href{https://github.com/#3}{\faGithub} & 
+			 \href{https://github.com/#3}{github.com/#3} \\ 
+		}
+		\ifblank{#4}{}{%
+			\href{https://stackoverflow.com/u/#4/}{\faStackOverflow} &
+			\href{https://stackoverflow.com/u/#4/}{stackoverflow.com/u/#4} \\
+		}
+		\end{tabular}
+	\end{center}
+}
+
+

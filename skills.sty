@@ -1,0 +1,37 @@
+% !TeX root = cv
+% !TeX root = sample
+
+
+\ProvidesPackage{skills}
+
+\RequirePackage{expkv-cs}
+\RequirePackage{paracol}
+
+\newcommand\skills[2]{%
+	\columnratio{0.5, 0.5}
+	\begin{paracol}{2}
+		\begin{tabular}{@{}rl@{}}
+			#1				
+		\end{tabular}
+		\switchcolumn
+		\begin{tabular}{@{}rl@{}}
+			#2
+		\end{tabular}
+	\end{paracol}
+}
+
+\newcommand{\skill}[2]{%
+	\begin{tabular}[t]{r}
+		\ekvcsvloop\skilltitle{#1}
+	\end{tabular}
+	&
+	\begin{tabular}[t]{l}
+		\ekvcsvloop\skillcontent{#2}
+	\end{tabular}
+	\smallskip
+	\\
+}%
+
+\newcommand\skilltitle[1]{\footnotesize\textsc{#1}\\} 
+
+\newcommand\skillcontent[1]{#1\\}

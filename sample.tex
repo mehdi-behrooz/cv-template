@@ -1,0 +1,94 @@
+\documentclass{cvtemplate}
+\usepackage{lipsum}
+
+\begin{document}
+	
+\personalinfo
+{
+	\name {John Doe} {My Job Title}
+}
+{
+	\contact{
+		phone=+1 234 567 8989, 
+		email=john.doe@gmail.com, 
+		github=john-doe,
+		stackoverflow=111111
+	}
+}
+	
+\section {job experiences}
+	
+\experience{Company A}{City, Country}{My Role}{2010 - 2015} {
+	\detail {%
+		\lipsum[1][1]
+	}%
+	\detail {%
+		\lipsum[1][2]
+	}%
+	\detail {%
+		\lipsum[1][3-5] 	
+	}%
+	\detail {%
+		\lipsum[1][6] 	
+	}%
+	\detail {%
+		\lipsum[1][7] 	
+	}%
+	\detail {%
+		\lipsum[1][8] 	
+	}%
+}
+	
+\experience{Company B}{City, Country}{My Role}{2005 - 2010} {
+	\detail {%
+		\lipsum[2][1-2]
+	}%
+	\detail {%
+		\lipsum[2][3-4]
+	}%
+	\detail {%
+		\lipsum[2][5-8] 	
+	}%
+	\detail {%
+		\lipsum[2][9] 	
+	}%
+	\detail {%
+		\lipsum[2][10] 	
+	}%
+}
+
+\section{education}
+	
+\experience{University}{City, Country}{M.Sc. in Software Engineering}{2000 - 2005} {
+	\detail {%
+		\lipsum[1][1]
+	}%
+	\detail {%
+		\lipsum[1][1-2]
+	}%
+}
+
+\newpage
+	
+\section{technical skills}
+\skills {
+	\skill{category a}{Skill a1, Skill a2, Skill a3}
+	\skill{category b}{Skill b1, Skill b2, Skill b3, Skill b4, Skill b5}
+	\skill{category, ccccc}{Skill c1, Skill c2, Skill c3, Skill c4}
+	\skill{category d}{Skill d1, Skill d2, Skill d3 and d4, Skill d5, Skill d6, Skill d7}
+}
+{
+	\skill{category e}{Skill e1, Skill e2, Skill e3, Skill e4, Skill e5, Skill e6, Skill e7, Skill e8, Skill e9}
+	\skill{category f}{Skill f1, Skill f2, Skill f3, Skill f4, Skill f5}
+	\skill{category g}{Skill g1, Skill g2, Skill g3, Skill g4}
+}
+
+\section{Other Skills}
+\skills {
+	\skill{human, languages}{English \textperiodcentered{} native, German \textperiodcentered{} proficient, French \textperiodcentered{} intermediate, Italian \textperiodcentered{} beginner}
+}{
+	\skill{professional, interests}{Interest A, Interest B, Interest C}
+}
+
+	
+\end{document}
