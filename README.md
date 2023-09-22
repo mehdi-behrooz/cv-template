@@ -1,7 +1,7 @@
 # About
 This is the Latex template for my personal CV. There is nothing special about it.
 
-# How to use
+### How to use
 There are two ways to use it. 
 
 ### The easy way:
@@ -20,3 +20,18 @@ For example, if you use `MiKTeX Console` (on Windows), you have two options:
   initexmf --register-root=$pwd/cv-template/
   initexmf --update-fndb
 ```
+
+# Troubleshooting:
+
+### No autocompletion or spellchecking in TexStudio:
+Sometimes, TexStudio generates the wrong/empty 
+[CWL files](https://htmlpreview.github.io/?https://github.com/texstudio-org/texstudio/master/utilities/manual/usermanual_en.html#description-of-the-cwl-format)
+for third-party packages, when it sees them for the first time.
+Therefore, you will not get correct autocompletions or spellcheckings. 
+To fix that, it suffices to delete those wrong CWL files:
+
+```
+    $ cd /mnt/c/Users/YOUR_USERNAME/AppData/Roaming/texstudio/completion
+    $ find . -iname '*.cwl' -exec rm -rf {} \;
+```
+
