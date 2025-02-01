@@ -9,7 +9,7 @@
 
 \RequirePackage{microtype} % fine-tunes the typography of the document
 \RequirePackage{geometry}  % customizes the page layout
-\RequirePackage{titlesec}  % customizes the layout of section titles 
+\RequirePackage{titlesec}  % customizes the layout of section titles
 \RequirePackage{numprint}  % prints numbers with separators
 \RequirePackage{hyperref}  % handles hyper-links
 \RequirePackage{xcolor}    % provides colored texts
@@ -57,3 +57,4 @@
 
 % a custom command to make some texts red (for auditing purposes)
 \newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\blue[1]{\textcolor{blue}{#1}}
